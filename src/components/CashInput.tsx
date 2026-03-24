@@ -5,7 +5,7 @@ interface CashInputProps {
 
 export function CashInput({ value, onChange }: CashInputProps) {
   return (
-    <div className="bg-card rounded-lg p-8 mb-6">
+    <div className="bg-card rounded-lg p-5 md:p-8 mb-6">
       <h2 className="text-lg font-bold text-foreground">Cash in the Bank</h2>
       <p className="text-sm text-muted mb-4">Your current total available cash</p>
       <input

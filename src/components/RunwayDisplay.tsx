@@ -25,7 +25,7 @@ export function RunwayDisplay({ months, monthlyCosts, cashBalance }: RunwayDispl
 
   return (
     <div className="mb-10">
-      <div className="bg-card rounded-lg p-8 text-center">
+      <div className="bg-card rounded-lg p-5 md:p-8 text-center">
         <p className="text-xs font-medium text-muted uppercase tracking-[0.15em] mb-4">
           Your Runway
         </p>

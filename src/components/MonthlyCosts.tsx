@@ -22,7 +22,7 @@ export function MonthlyCosts({
   total,
 }: MonthlyCostsProps) {
   return (
-    <div className="bg-card rounded-lg p-8 mb-6">
+    <div className="bg-card rounded-lg p-5 md:p-8 mb-6">
       <div className="flex items-center justify-between mb-4">
         <div>
           <h2 className="text-lg font-bold text-foreground">Monthly Costs</h2>
@@ -30,7 +30,7 @@ export function MonthlyCosts({
         </div>
         <button
           onClick={onAdd}
-          className="flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+          className="flex items-center gap-2 bg-foreground text-background px-3 md:px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity shrink-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,20 +52,20 @@ export function MonthlyCosts({
 
       <div className="space-y-3">
         {costs.map((cost) => (
-          <div key={cost.id} className="flex gap-3 items-center">
+          <div key={cost.id} className="flex gap-2 md:gap-3 items-center min-w-0">
             <input
               type="text"
-              placeholder="e.g. Rent, Salaries, AI Tokens..."
+              placeholder="e.g. Rent, Salaries..."
               value={cost.name}
               onChange={(e) => onUpdateName(cost.id, e.target.value)}
-              className="flex-1 rounded-md border border-border bg-white px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/20"
+              className="flex-1 min-w-0 rounded-md border border-border bg-white px-3 md:px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/20"
             />
             <input
               type="number"
               placeholder="0"
               value={cost.amount || ""}
               onChange={(e) => onUpdateAmount(cost.id, Number(e.target.value) || 0)}
-              className="w-28 rounded-md border border-border bg-white px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/20"
+              className="w-24 md:w-28 shrink-0 rounded-md border border-border bg-white px-3 md:px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/20"
             />
             {costs.length > 1 && (
               <button
