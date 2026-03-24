@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(36 50% 96%);
+  --color-foreground: hsl(30 10% 8%);
+  --color-card: hsl(36 40% 94%);
+  --color-muted: hsl(30 5% 45%);
+  --color-border: hsl(36 20% 87%);
+  --color-input: hsl(36 20% 87%);
+  --color-runway-healthy: hsl(142 71% 35%);
+  --color-runway-caution: hsl(38 92% 45%);
+  --color-runway-danger: hsl(0 72% 48%);
+
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove spinner from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
